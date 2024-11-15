@@ -1,0 +1,37 @@
+.headings {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.containers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 6vw;
+    /* justify-content: space-evenly; */
+    gap: 1vw;
+  
+}
+
+.containers__leftbox{
+    width: 40vw;
+    height: 80vh;
+}
+
+.conatiners__rightbox{
+    width: 40vw;
+    height: 80vh;
+}
+
+.destinations-cards img{
+    width: 40vw;
+    height: 35vh;
+    object-fit: cover;
+
+}
+.destinations-cards .img_b{
+    height: 40vh;
+}

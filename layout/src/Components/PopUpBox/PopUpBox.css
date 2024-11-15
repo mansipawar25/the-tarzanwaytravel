@@ -1,0 +1,64 @@
+.popup{
+    position: fixed;
+    z-index: 110;
+    background: transparent;
+    width: 100vw;
+    height: 90vh;
+    display:  flex;
+    align-items: center;
+    justify-content: center; 
+    animation: openAnimation 0.3s ease-in-out forwards;/
+}
+
+@keyframes openAnimation{
+    0%{
+        transform: translateY(-200px);
+            opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+            opacity: 1;
+    }
+}
+
+.popup div{
+    display: flex;
+    /* margin: auto auto; */
+        box-shadow: 2px 2px 20px black;
+        position: relative;
+}
+
+.popup__leftBox{
+    width:40vw;
+    height: 80vh;
+    background: rgb(222, 220, 220);
+}
+.popup__rightBox {
+    width: 40vw;
+    height: 80vh;
+    background:rgb(212, 217, 219);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.icon{
+    position:absolute;
+    z-index: 111;
+    right: 10px;
+    top:10px;
+    font-size: 24px;
+    font-weight: 800;
+    
+}
+.login-form{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: ;
+}
+.login-form select{
+    width: 150px;
+}
+.login-form input[type='tel']{
+    margin: 10px 0;
+}
