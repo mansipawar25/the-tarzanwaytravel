@@ -13,7 +13,9 @@
   }
   
   .header img {
-    max-width: 200px;
+    max-width: 150px;
+  
+  
   }
   
   /* Join Community section styles */
@@ -27,7 +29,7 @@
   .join-community h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #000;
+    color: #0b0104;
   }
   
   .join-community p {
@@ -49,7 +51,7 @@
   }
   
   .join-community button {
-    background-color: #000408;
+    background-color: #101010;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -60,7 +62,7 @@
   
   /* Footer styles */
   .footer {
-    background-color: #090000;
+    background-color: #0e0000;
     padding: 35px;
     display: flex;
     justify-content: space-between;
@@ -69,6 +71,11 @@
   
   .footer-section {
     flex-basis: 20%;
+  }
+  .footer-section img{
+    width: 200px;
+    height: 70px;
+    border-radius: 25px;
   }
   
   .footer-section h4 {
@@ -111,9 +118,5 @@
   .social-media i {
     font-size: 24px;
   }
-  .copyright{
-    text-align: center;
-    background: #000408;
-    color: #ccc;
-    margin-top: 0;
-  }
+  
+  

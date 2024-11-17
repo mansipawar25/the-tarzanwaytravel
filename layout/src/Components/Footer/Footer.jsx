@@ -1,9 +1,9 @@
 
 import './Footer.css';
-import moduleName from '../../assets/mAIN ICON.webp'
+import module from '../../assets/logo.png'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faFacebookF, faInstagram, faPinterestP } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faTwitter, faFacebookF, faInstagram, faPinterestP } from '@fortawesome/free-brands-svg-icons';
 
 
 function Footer() {
@@ -22,14 +22,8 @@ function Footer() {
 
       <div className="footer">
         <div className="footer-section">
-          <img src={moduleName} alt="The Tarzan Way Logo" />
+          <img src={module} alt="The Tarzan Way Logo" />
           <p>The Tarzan Way is a travel-based startup with the vision to simplify travel and build immersive travel programs across India.</p>
-          <div className="social-media">
-            <FontAwesomeIcon icon={faTwitter} />
-            <FontAwesomeIcon icon={faFacebookF} />
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faPinterestP} />
-          </div>
           <p>Contact Us-+91 9532189564</p>
           <p>Email-info@thetarzanway.com</p>
         </div>
