@@ -166,7 +166,7 @@ const data = [
     image: "https://d31aoa0ehgvjdi.cloudfront.net//eyJidWNrZXQiOiJ0aGV0YXJ6YW53YXktd2ViIiwia2V5IjoibWVkaWEvc3RhdGVzLzE2NzUzNTY2MjIwMDU2NzEyNjI3NDEwODg4NjcxOS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiaGVpZ2h0Ijo4MDB9fX0=",
   },
   {
-    name: "Dadra & Nagar Haveli and Daman & Diu ",
+    name: "Dadra Daman & Diu ",
     price: "₹9,339",
     image: "https://d31aoa0ehgvjdi.cloudfront.net//eyJidWNrZXQiOiJ0aGV0YXJ6YW53YXktd2ViIiwia2V5IjoibWVkaWEvc3RhdGVzLzE2NzUzNTc0MzU5NzkzODc5OTg1ODA5MzI2MTcxOS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiaGVpZ2h0Ijo4MDB9fX0=",
   },
@@ -193,8 +193,8 @@ const Scroll = () => {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 2000,
@@ -219,44 +219,28 @@ const Scroll = () => {
   };
 
 
-return (
-  <div className="maindiv">
-    <div className="maainn">
-      <div className="container">
-        <h2 className="headstyle">Plan as per the best destinations in India</h2>
-      </div>
+  return (
+    <div className="scroll">
       <Slider {...settings}>
-        {data.map((d) => (
-          <div key={d.name} className="source">
-            <div className="imgS">
-              <img
-                src={d.image}
-                alt=""
-                onClick={() => goTo(d.route)}
-                className="imgclass"
-              />
-            </div>
-            <div className="textcol">
-              <p className="locname">{d.name}</p>
-              <p className="locprice">From {d.price}/-per day </p>
-              <button
-                onClick={() => goTo(d.route)}
-                className="btnstyle"
-              >
-                Plan a trip
-              </button>
+        {data.map((destination, index) => (
+          <div
+            key={index}
+            className="scroll-card"
+            onClick={() => handleNavigation(destination.route)}
+          >
+            <img
+              src={destination.image}
+              alt={destination.name}
+              className="scroll-image"
+            />
+            <div className="scroll-content">
+              <h3>{destination.name}</h3>
+              <p>{destination.price || "Price unavailable"}</p>
             </div>
           </div>
         ))}
-
       </Slider>
     </div>
-    <div className="genclass">
-      <button className="start">
-        Start your journey to India now!
-      </button>
-    </div>
-  </div>
-)
+  );
 }
 export default Scroll

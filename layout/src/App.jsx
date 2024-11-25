@@ -98,7 +98,7 @@ const App = () => {
           }
         </div>
         <button className='btn'>Plan Itinerary For Free!</button>
-        <h3 className='plan'>Plan as per the best destinations in India.</h3>
+        <h2 className='planind'>Plan your Destination anywhere in India.</h2>
         <Scroll />
 
         <h3 className='top'>Top Countries to visit in India.</h3>
