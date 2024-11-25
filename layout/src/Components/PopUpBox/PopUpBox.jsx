@@ -19,14 +19,10 @@ const PopUpBox = ({ closePopup }) => {
       console.log('Mobile Number:', mobileNumber);
       console.log('Receive Updates:', receiveUpdates);
     };
-
-
-
   return (
     <div className="popup">
       <div>
         <RxCross2 className="icon" onClick={closePopup} />
-        <div className="popup__leftBox"></div>
         <div className="popup__rightBox">
           <h2>Login onto your Account</h2>
           <form onSubmit={handleSubmit}>
@@ -41,7 +37,7 @@ const PopUpBox = ({ closePopup }) => {
               <label htmlFor='receiveUpdates'>
                 Receive booking updates via whatsapp
               </label>
-              <button type='submit'>Request OTP</button>
+              <button  className="bat" type='submit'>Request OTP</button>
             </div>
           </form>
         </div>

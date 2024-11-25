@@ -8,9 +8,10 @@
     color: #fff;
     position:relative;
     margin-top: 0;
-    z-index: 88;
-
-    
+    z-index: 88; 
+}
+.heading{
+    padding: 20px;
 }
 .herocontent h1{
     font-size: 50px;

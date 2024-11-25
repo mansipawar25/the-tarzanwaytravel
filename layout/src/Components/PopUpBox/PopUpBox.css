@@ -1,64 +1,120 @@
-.popup{
+.popup {
     position: fixed;
     z-index: 110;
     background: transparent;
     width: 100vw;
     height: 90vh;
-    display:  flex;
-    align-items: center;
-    justify-content: center; 
-    animation: openAnimation 0.3s ease-in-out forwards;/
-}
-
-@keyframes openAnimation{
-    0%{
-        transform: translateY(-200px);
-            opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-            opacity: 1;
-    }
-}
-
-.popup div{
     display: flex;
-    /* margin: auto auto; */
-        box-shadow: 2px 2px 20px black;
-        position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    animation: openAnimation 0.3s ease-in-out forwards;
 }
 
-.popup__leftBox{
-    width:40vw;
-    height: 80vh;
-    background: rgb(222, 220, 220);
+
+@keyframes openAnimation {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
+
+option {
+    font-size: 40px;
+}
+
+.popup div {
+    display: flex;
+    box-shadow: 2px 2px 20px black;
+    position: relative;
+}
+
+
 .popup__rightBox {
     width: 40vw;
     height: 80vh;
-    background:rgb(212, 217, 219);
+    background: rgb(212, 217, 219);
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.icon{
-    position:absolute;
+.icon {
+    position: absolute;
     z-index: 111;
     right: 10px;
-    top:10px;
+    top: 10px;
     font-size: 24px;
     font-weight: 800;
-    
+
 }
-.login-form{
+
+.popup__rightBox {
+    font-size: 20px;
+    font-weight: 200;
+
+}
+
+.login-form {
     padding: 20px;
     border-radius: 5px;
-    box-shadow: ;
+    display: flex;
+    flex-direction: column;
 }
-.login-form select{
-    width: 150px;
+
+select,
+input,
+button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
 }
-.login-form input[type='tel']{
+
+label{
+    margin-left: 5px;
+}
+
+
+.login-form input[type='tel'] {
     margin: 10px 0;
+    font-size: 25px;
+    font-weight: 150;
+}
+
+.bat {
+    font-size: 15px;
+    padding: 5px 15px;
+    color: azure;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+
+}
+
+@media (max-width: 768px) {
+    .popup {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .popup_rightBox {
+        flex-direction: column;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    select,
+    input,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
